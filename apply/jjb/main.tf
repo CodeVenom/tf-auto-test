@@ -10,6 +10,7 @@ terraform {
 
   backend "s3" {
     bucket = "jjb-tf"
+    dynamodb_table = "jjb-tf-lock"
     key = "test/test.tfstate"
     profile = "jj-admin"
     region = "eu-central-1"
