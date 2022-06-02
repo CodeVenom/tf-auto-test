@@ -1,0 +1,13 @@
+name: temp
+on: push
+jobs:
+  temp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: print something
+        run: |
+          echo "something"
